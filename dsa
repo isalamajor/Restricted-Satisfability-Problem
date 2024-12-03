@@ -1,0 +1,39 @@
+R1 ROUTES: 
+    (to hstOfi2) 
+        ip route 10.0.38.128/27 10.0.38.178
+        ip route 10.0.38.128/27 10.0.38.185
+    (to servers) 
+        ip route 10.0.38.160/28 10.0.38.185 
+        ip route 10.0.38.160/28 10.0.38.178
+    (to backbone) 
+        ip route 10.0.0.0/24 10.0.38.185
+        ip route 10.0.0.0/24 10.0.38.178
+    (to branch 100) 
+        ip route 10.0.100.0/24 10.0.38.185
+        ip route 10.0.38.160/28 10.0.38.178
+
+R2 ROUTES: 
+    (to hstOfi1) 
+        ip route 10.0.38.0/25 10.0.38.177
+        ip route 10.0.38.160/28 10.0.38.182 
+    (to servers) 
+        ip route 10.0.38.160/28 10.0.38.182 
+        ip route 10.0.38.0/25 10.0.38.177
+    (to backbone)
+        ip route 10.0.0.0/24 10.0.38.182
+        ip route 10.0.38.0/25 10.0.38.177
+    (to branch 100) 
+        ip route 10.0.100.0/24 10.0.38.182
+        ip route 10.0.38.0/25 10.0.38.177
+
+R3 ROUTES:
+    (to hstOfi1)
+        ip route 10.0.38.0/25 10.0.38.186
+        ip route 10.0.38.128/27 10.0.38.181
+    (to hstOfi2) 
+        ip route 10.0.38.128/27 10.0.38.181
+        ip route 10.0.38.128/27 10.0.38.186 
+    (to backbone) 
+        ip route 10.0.0.0/24 10.0.38.190
+    (to branch 100) 
+        ip route 10.0.100.0/24 10.0.38.190
